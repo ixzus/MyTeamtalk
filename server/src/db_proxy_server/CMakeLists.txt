@@ -12,8 +12,8 @@ elseif(UNIX)
     SET(PB_LIB_DIR ../base/pb/lib/linux)
 endif()
 
-SET(MYSQL_INCLUDE_DIR /usr/include/mysql)
-SET(MYSQL_LIB /usr/lib64/mysql)
+SET(MYSQL_INCLUDE_DIR /usr/local/include/mysql)
+SET(MYSQL_LIB /usr/local/mysql/lib)
 
 ADD_DEFINITIONS( -g -W -Wall -D_REENTRANT -D_FILE_OFFSET_BITS=64 -DAC_HAS_INFO
 -DAC_HAS_WARNING -DAC_HAS_ERROR -DAC_HAS_CRITICAL -DTIXML_USE_STL
