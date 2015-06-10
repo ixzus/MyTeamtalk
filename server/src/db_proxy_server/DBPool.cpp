@@ -231,6 +231,7 @@ int CDBConn::Init()
 
 	if (!mysql_real_connect(m_mysql, m_pDBPool->GetDBServerIP(), m_pDBPool->GetUsername(), m_pDBPool->GetPasswrod(),
 			m_pDBPool->GetDBName(), m_pDBPool->GetDBServerPort(), NULL, 0)) {
+		log("DBServerIp=%s Username=%s Password=%s DBName=%s DBServerPort=%d", m_pDBPool->GetDBServerIP(), m_pDBPool->GetUsername(), m_pDBPool->GetPasswrod(),m_pDBPool->GetDBName(), m_pDBPool->GetDBServerPort());
 		log("mysql_real_connect failed: %s", mysql_error(m_mysql));
 		return 2;
 	}
